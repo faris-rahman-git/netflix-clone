@@ -17,10 +17,8 @@ const App = () => {
     setLoading(true);
     const user = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        console.log("User is Login:", user);
         navigate("/");
       } else {
-        console.log("No user is Login.");
         navigate("/login");
       }
       setLoading(false);

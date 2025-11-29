@@ -33,7 +33,6 @@ const signup = async (name, email, password) => {
       email,
     });
   } catch (err) {
-    console.log(err);
     toast.error("Email already in use.");
     toast.error("Password should be at least 6 characters.");
   }
@@ -43,7 +42,6 @@ const login = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
-    console.log(err);
     toast.error("Invalid email or password");
   }
 };
